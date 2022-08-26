@@ -1,0 +1,47 @@
+class Player {
+    constructor(name, type){
+        this.name = name,
+        this.type = type
+    }
+    
+    speak(){
+        console.log(`Hello. my name is ${this.name}.  I am a ${this.type}.`);
+    }
+
+}
+
+class Merchant extends Player{
+    constructor(name, type){
+        super(name, type)
+    }
+    sell(){
+        console.log(`Would you like to buy some wares.`);
+    }
+}
+//#3 create two classes: an Animal class and a Mamal class. 
+// create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
+
+class Animal {
+    constructor(name, type, color){
+        this.name = name,
+        this.type = type,
+        this.color = color
+    }
+}
+
+class Mammal extends Animal{
+    constructor(name, type, color){
+        super(name, type, color)
+    }
+}
+
+class Cow extends Animal{
+    constructor(name, type, color){
+        super(name, type, color)
+    }
+    moo(){
+        console.log(`Moo name is ${this.name}. I am a ${this.type} and my moo-lor is ${this.color}.`);
+    }
+}
+
+const betsy = new Cow("Betsy", "Milk Cow", "White with Black spots");
